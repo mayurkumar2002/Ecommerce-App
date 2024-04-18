@@ -17,7 +17,7 @@ const Policy = () => {
           <p>
             Your privacy is important to us. It is our
             policy to respect your privacy regarding any information we may
-            collect from you across our website, [website address], and other
+            collect from you across our website, and other
             sites we own and operate.
           </p>
           <p>
@@ -56,7 +56,7 @@ const Policy = () => {
           </p>
           <p>
             This policy is effective as of 01/04/2024 and was last updated on
-            16/04/2024.
+            18/04/2024.
           </p>
         </div>
       </div>

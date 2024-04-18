@@ -10,7 +10,7 @@ import { Badge } from "antd";
 const Header = () => {
   const [auth, setAuth] = useAuth();
   const [cart] = useCart();
-   const categories = useCategory()
+  const categories = useCategory()
   const handleLogout = () => {
     setAuth({
       ...auth,
@@ -37,13 +37,18 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-              🛒 Ecommerce App
+              🛒 Harvest Haven
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <SearchInput/>
               <li className="nav-item">
                 <NavLink to="/" className="nav-link ">
                   Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/Product" className="nav-link ">
+                  Products
                 </NavLink>
               </li>
               <li className="nav-item dropdown">

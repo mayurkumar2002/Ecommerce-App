@@ -43,7 +43,7 @@ const ProductDetails = () => {
   return (
     <Layout>
       <div className="row container product-details">
-        <div className="col-md-6" style={{ width: "25rem" }}>
+        <div className="col-md-6" style={{ width: "30rem" }}>
           <img
             src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${product._id}`}
             className="card-img-top"
@@ -59,10 +59,7 @@ const ProductDetails = () => {
           <h6>Description : {product.description}</h6>
           <h6>
             Price :
-            {product?.price?.toLocaleString("en-US", {
-              style: "currency",
-              currency: "USD",
-            })}
+            ₹ {product.price}.00
           </h6>
           <h6>Category : {product?.category?.name}</h6>
           <button class="btn btn-secondary ms-1" onClick={() => {
@@ -83,7 +80,7 @@ const ProductDetails = () => {
         )}
         <div className="d-flex flex-wrap">
           {relatedProducts?.map((p) => (
-            <div className="card m-2" key={p._id}>
+            <div className="card m-2" style={{ width: "21rem" }} key={p._id}>
               <img
                 src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                 className="card-img-top"
@@ -93,10 +90,7 @@ const ProductDetails = () => {
                 <div className="card-name-price">
                   <h5 className="card-title">{p.name}</h5>
                   <h5 className="card-title card-price">
-                    {p.price.toLocaleString("en-US", {
-                      style: "currency",
-                      currency: "USD",
-                    })}
+                  ₹ {p.price}.00
                   </h5>
                 </div>
                 <p className="card-text ">

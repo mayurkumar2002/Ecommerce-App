@@ -19,7 +19,7 @@ const Contact = () => {
             available.
           </p>
           <p className="mt-3">
-            <BiMailSend /> : www.help@ecommerceapp.com
+            <BiMailSend /> : www.help@harvesthaven.com
           </p>
           <p className="mt-3">
             <BiPhoneCall /> : 012-3456789

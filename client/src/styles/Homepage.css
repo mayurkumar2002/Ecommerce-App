@@ -1,8 +1,3 @@
-.banner-img {
-    margin-top: 60px;
-    height: 25em;
-}
-
 .home-page h1 {
     color: gray;
     font-family: "Playfair Display", serif;
@@ -43,6 +38,7 @@
 }
 
 .home-page .card img:hover {
+    transition: transform 0.5s ease;
     transform: scale(0.9);
 }
 

@@ -12,6 +12,7 @@ const CategoryProduct = () => {
   const [cart, setCart] = useCart([]);
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (params?.slug) getPrductsByCat();
@@ -19,12 +20,15 @@ const CategoryProduct = () => {
   
   const getPrductsByCat = async () => {
     try {
+      setLoading(true);
       const { data } = await axios.get(
         `${process.env.REACT_APP_API}/api/v1/product/product-category/${params.slug}`
       );
       setProducts(data?.products);
       setCategory(data?.category);
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       console.log(error);
     }
   };
@@ -34,13 +38,21 @@ const CategoryProduct = () => {
       <div className="container mt-3 category">
         <h3 className="text-center">Category - {category?.name}</h3>
         <h6 className="text-center">{products?.length} results found </h6>
+        {loading && <button
+                className="btn"
+                style={{color: 'green',
+                  fontWeight: 'bold',
+                  fontSize: '20px'}}
+              >
+                Loading ...
+              </button>}
         <div className="row">
           <div className="col-md-12 offset-1">
             <div className="d-flex flex-wrap">
               {products?.map((p) => (
                 <div
                   className="card m-2"
-                  style={{ width: "18rem" }}
+                  style={{ width: "21rem" }}
                   key={p._id}
                 >
                   <img
@@ -52,10 +64,7 @@ const CategoryProduct = () => {
                     <div className="card-name-price">
                       <h5 className="card-title">{p.name}</h5>
                       <h5 className="card-title card-price">
-                        {p.price.toLocaleString("en-US", {
-                          style: "currency",
-                          currency: "USD",
-                        })}
+                      ₹ {p.price}.00
                       </h5>
                     </div>
                       <p className="card-text">

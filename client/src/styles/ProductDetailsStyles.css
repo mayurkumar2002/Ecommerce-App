@@ -43,6 +43,7 @@
 }
 
 .similar-products .card img:hover {
+    transition: transform 0.5s ease;
     transform: scale(0.9);
 }
 

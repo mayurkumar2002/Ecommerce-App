@@ -14,13 +14,16 @@ const About = () => {
         </div>
         <div className="col-md-5">
           <p className="text-justify mt-2">
-            Welcome to our online store! At our ecommerce app, we are committed to offering you a seamless shopping experience. Our mission is to provide you with high-quality products that enhance your lifestyle, coupled with exceptional customer service.
+            Harvest Haven is your premier destination for connecting farmers with consumers seeking high-quality products at reasonable rates. Our ecommerce platform is committed to providing a seamless shopping experience, ensuring you find the products you need to enhance your lifestyle.
             <br />
             <br />
-            We understand the importance of dependability and strive to bring you reliable products that you can trust. Whether you're looking for everyday essentials or unique finds, we've got you covered.
+            At Harvest Haven, we prioritize dependability, offering a curated selection of reliable products that you can trust. Whether you're searching for everyday essentials or unique finds, our platform has you covered.
             <br />
             <br />
-            Our team works tirelessly to curate a selection of products that cater to your needs and preferences. We value your satisfaction above all else and are here to assist you every step of the way.
+            Our mission is simple: to empower farmers by providing them with a platform to showcase and sell their products directly to consumers. We understand the importance of supporting local agriculture and are committed to helping farmers reach a wider audience while ensuring fair prices for both producers and consumers.
+            <br />
+            <br />
+            Our team works tirelessly to ensure your satisfaction, providing exceptional customer service every step of the way. Whether you have a question about a product or need assistance with your order, we're here to help.
           </p>
         </div>
       </div>

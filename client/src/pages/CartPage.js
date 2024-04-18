@@ -106,12 +106,12 @@ const CartPage = () => {
                     height={"200em"}
                   />
                 </div>
-                <div className="col-md-4">
-                  <p>{p.name}</p>
-                  <p>{p.description.substring(0, 30)}</p>
-                  <p>Price : {p.price}</p>
+                <div className="col-md-6">
+                  <h5>{p.name}</h5>
+                  <p>{p.description.substring(0, 80)}...</p>
+                  <p>Price : ₹{p.price}.00</p>
                 </div>
-                <div className="col-md-4 cart-remove-btn mt-5">
+                <div className="col-md-2 cart-remove-btn mt-5">
                     <button
                       className="btn btn-danger"
                       onClick={() => removeCartItem(p._id)}

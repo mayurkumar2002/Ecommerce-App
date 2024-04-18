@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Layout from "./../components/Layout/Layout";
+import Layout from "../components/Layout/Layout";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -8,9 +8,8 @@ import { Prices } from "../components/Prices";
 import { useCart } from "../context/cart";
 import "../styles/Homepage.css";
 
-const HomePage = () => {
+const Product = () => {
   const navigate = useNavigate();
-
   const [cart, setCart] = useCart([]);
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -108,12 +107,6 @@ const HomePage = () => {
   };
   return (
     <Layout title={"ALL Products - Best offers "}>
-      {/* <img
-        src="/images/banner.jpg"
-        className="banner-img"
-        alt="bannerimage"
-        width={"100%"}
-      /> */}
       <div className="container-fluid row mt-3 home-page">
         <div className="col-md-2 filters">
           <h4 className="text-center">Filter By Category</h4>
@@ -151,7 +144,7 @@ const HomePage = () => {
           <h1 className="text-center">All Products</h1>
           <div className="d-flex flex-wrap">
             {products?.map((p) => (
-              <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
+              <div className="card m-2" style={{ width: "21rem" }} key={p._id}>
                 <img
                   src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
@@ -161,10 +154,7 @@ const HomePage = () => {
                   <div className="card-name-price">
                   <h5 className="card-title">{p.name}</h5>
                   <h5 className="card-title card-price">
-                      {p.price.toLocaleString("en-US", {
-                        style: "currency",
-                        currency: "USD",
-                      })}
+                      ₹ {p.price}.00
                     </h5>
                   </div>
                   <p className="card-text">
@@ -214,4 +204,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Product;
